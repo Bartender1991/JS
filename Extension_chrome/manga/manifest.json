@@ -1,0 +1,31 @@
+{
+	"name": "manga notificator",
+	"version": "1.0",
+	"description": "utilizalo para enterarte de nuevos mangas",
+	"manifest_version": 2,
+	"author": "mixologyzt",
+	"icons": {
+		"16": "16.png",
+		"128": "128.png"
+	},
+	"browser_action":{
+		"default_title": "youtube notificator",
+		"default_icon": "settings.png",
+		"default_popup": "popup.html"
+	},
+	"background":{
+		"page": "background.html"
+	},
+	"permissions": [
+		"notifications",
+		"storage",
+		"tabs",
+		"http://*/*",
+		"https://*/*",
+		"cookies",
+		"https://www.youtube.com/*"
+	],
+	"web_accessible_resources": [
+		"settings.png"
+	]
+}
