@@ -10,8 +10,8 @@
 	},
 	"browser_action":{
 		"default_title": "youtube notificator",
-		"default_icon": "settings.png",
-		"default_popup": "popup.html"
+		"default_icon": "settings.png"
+		// "default_popup": "popup.html"
 	},
 	"background":{
 		"page": "background.html"
