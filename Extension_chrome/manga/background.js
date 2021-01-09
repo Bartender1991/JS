@@ -11,7 +11,15 @@ var STRINGS ={
 	c:'<span class="chapter-viewed-icon',
 	cc:' data-chapter="'
 };
+var List ={
+	url:'https://lectortmo.com/profile/follow',
+	inicio:'<a href=" https://lectortmo.com/library/',
+	fin:'">'
+};
 
+var lol ={
+	url: 'https://lectortmo.com/library/manga/36989/Jujutsu-kaisen?orderDir=ASC'
+};
 var interval;
 var url = "https://lectortmo.com/library/manga/36989/Jujutsu-kaisen?orderDir=ASC";
 var videoName= "ERROR";
@@ -107,14 +115,12 @@ function analyze(response){
 	}
 }
 var contar=0;
-function check() {
+function check(url) {
 	console.log("hola");
 	// console.log(contar);
 	contar+=1;
 	// console.log(contar);
-	if (localStorage.youtubechannel) {
-		url = localStorage.youtubechannel;
-	};
+
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function(){
 		if (xmlhttp.readyState==4 && xmlhttp.status==200){
@@ -122,8 +128,9 @@ function check() {
 			analyze(xmlhttp.responseText);
 		};
 	};
+	// xmlhttp.open("GET", url, true);
 	xmlhttp.open("GET", url, true);
 	xmlhttp.send(null);
 	setTimeout(check,5000);
 };
-check();
+check(lol.url);

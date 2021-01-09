@@ -77,7 +77,7 @@ $(function(){
 
 function check2() {
 	var bg = chrome.extension.getBackgroundPage();
-	var video = videoLoader(bg.nombres, bg.links, bg.views);
+	var video = videoLoader(bg.nombres, bg.links, bg.vistos);
 	// videoLoader(bg.nombres, bg.links, bg.views);
 	// setTimeout(check2,5000);
 	
